@@ -1,37 +1,159 @@
+/* Allgemeine Einstellungen */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
+/* Farbvariablen */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --button-bg: #e0e0e0;
+    --button-hover: #c0c0c0;
+    --logo-bg: #1e90ff;
+    --logo-text-color: white;
+}
+
+.dark-mode {
+    --bg-color: #1e1e2f;
+    --text-color: #e7f4fa;
+    --button-bg: #333;
+    --button-hover: #555;
+    --logo-bg: #0078d7;
+    --logo-text-color: white;
+}
+
+/* Login-Bereich */
 #login-container {
-    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
 }
 
 #password-input {
     padding: 10px;
     font-size: 16px;
-    margin-bottom: 10px;
-    width: 200px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    width: 300px;
 }
 
 #login-button {
     padding: 10px 20px;
     font-size: 16px;
-    cursor: pointer;
-    background-color: #333;
-    color: #fff;
+    color: white;
+    background-color: var(--button-bg);
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 #login-button:hover {
-    background-color: #555;
+    background-color: var(--button-hover);
 }
 
 #error-message {
-    margin-top: 10px;
+    color: red;
+    display: none;
+}
+
+/* Hauptseite */
+#main-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Logo */
+#logo-container {
+    margin-bottom: 40px;
+}
+
+#logo {
+    background-color: var(--logo-bg);
+    color: var(--logo-text-color);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+#logo h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Interaktive Buttons (Layer) */
+#layers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.layer {
+    background-color: var(--button-bg);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.layer:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-5px) scale(1.05);
+}
+
+.layer:active {
+    transform: scale(0.95);
+}
+
+/* Theme-Switch Buttons */
+#theme-switch {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#theme-switch button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#theme-switch button:hover {
+    background-color: var(--button-hover);
 }
