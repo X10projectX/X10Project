@@ -3,21 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passwortgeschützte Seite</title>
+    <title>X10Project</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
+    <!-- Login-Bereich -->
     <div id="login-container">
-        <h1>Gib das Passwort ein</h1>
-        <input type="password" id="password-input" placeholder="Passwort">
+        <h1>Passwort erforderlich</h1>
+        <input type="password" id="password-input" placeholder="Passwort eingeben">
         <button id="login-button">Login</button>
-        <p id="error-message" style="color: red; display: none;">Falsches Passwort!</p>
+        <p id="error-message">Falsches Passwort!</p>
     </div>
 
-    <div id="content" style="display: none;">
-        <h1>Willkommen!</h1>
-        <p>Du hast Zugriff auf den geschützten Inhalt.</p>
+    <!-- Hauptseite -->
+    <div id="main-content">
+        <!-- Logo -->
+        <div id="logo-container">
+            <div id="logo">
+                <h1>X10Project</h1>
+            </div>
+        </div>
+
+        <!-- Interaktive Buttons (Layer) -->
+        <div id="layers">
+            <button class="layer">Home</button>
+            <button class="layer">Über uns</button>
+            <button class="layer">Projekte</button>
+            <button class="layer">Kontakt</button>
+        </div>
+    </div>
+
+    <!-- Theme Switch Buttons -->
+    <div id="theme-switch">
+        <button id="light-mode">☀️</button>
+        <button id="dark-mode">🌙</button>
     </div>
 </body>
 </html>
